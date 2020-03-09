@@ -1,0 +1,252 @@
+
+/*MY CODE*/
+* {
+  list-style: none;
+  text-decoration: none;
+  padding: 0vw;
+  margin: 0vw;
+}
+
+#home-page {
+  background: url(https://cdn.glitch.com/0891aaef-25f5-42b3-aa05-9dabe3fd6c79%2FOptimized-5D391D57-86BF-4457-B27A-45D841705C70.JPG?v=1576000051164) no-repeat;
+  background-size: cover;
+}
+
+.name {
+  padding: 0.5vw;
+  font-size: 3vw;
+  text-align: center;
+  font-family: 'Sulphur Point', sans-serif;
+  background-color: lightgrey;
+}
+
+.apps-title {
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 3vw;
+  font-family: 'Sulphur Point', sans-serif;
+  font-size: 4vw;
+}
+
+.websites-title {
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 0.5vw;
+  padding: 0.5vw;
+  font-size: 4vw;
+  font-family: 'Sulphur Point', sans-serif;
+  padding-top: 15vw;
+}
+
+.header {
+  background-color: rgba(225, 225, 225, 0.75);
+  border-bottom: 0.2vw solid black;
+}
+
+.nav-text-left {
+  margin: 0.35vw 0.5vw 0.2vw 0.5vw;
+  text-decoration: none;
+  list-style: none;
+  font-size: 1.5vw;
+  float: left;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+  font-family: 'Roboto Condensed', sans-serif;
+  box-sizing: border-box;
+  top: 50%;
+  list-style-type: none;
+  display: inline-block;
+  width: auto;
+  background-color: rgba(230, 230, 230, 0.8);
+  border-radius: 1vw;
+  display: block;
+}
+
+.nav-text-right {
+  margin: 0.35vw 0.5vw 0.2vw 0.5vw;
+  text-decoration: none;
+  list-style: none;
+  font-size: 1.5vw;
+  float: right;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+  font-family: 'Roboto Condensed', sans-serif;
+  box-sizing: border-box;
+  top: 50%;
+  list-style-type: none;
+  display: inline-block;
+  width: auto;
+  background-color: rgba(230, 230, 230, 0.8);
+  border-radius: 1vw;
+  display: block;
+}
+
+.background {
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.intro {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 4vw;
+    text-decoration: underline;
+}
+
+.nav-text-left a {
+  color: black;
+  padding: 0.2vw 3vw;
+}
+
+.nav-text-right a {
+  color: black;
+  padding: 0.2vw 3vw;
+}
+
+.title {
+  text-decoration: underline;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 4vw;
+  margin: 4vw 0 2vw 4vw;
+}
+
+#footer {
+  background-color: #404A4F;
+  position: relative;
+  height: 3vw;
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  width: 100%;
+  bottom: 0vw;
+  position: absolute;
+}
+
+.footer-text {
+  padding-top: 0.8vw;
+  font-size: 1.2vw;
+}
+
+.menu {
+  width: 100%;
+  padding-bottom: 3.5vw;
+  border-bottom: solid 0.2vw black;
+  margin-bottom: 10.5vw;
+  background-color: lightgrey;
+}
+
+.contact-me-text {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 0.5vw;
+}
+
+.heading {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.5vw;
+  float: left;
+  text-decoration: underline;
+}
+
+#projects-footer {
+  background-color: #404A4F;
+  position: relative;
+  height: 3vw;
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  width: 100%;
+  bottom: -40vw;
+  position: absolute;
+}
+
+.first-game-img {
+  border-radius: 0.5vw;
+  width: 17vw;
+  height: 17vw;
+  margin-top: 2vw;
+  margin-left: 3vw;
+}
+
+ul li a:hover {
+  font-weight: bold;
+}
+
+.first-game-banner {
+  background-color: rgb(210,210,210);
+  width: 100%;
+  height: 25vw;
+  border-top: solid black 0.3vw;
+  border-bottom: solid black 0.3vw;
+}
+
+.game-title {
+  padding: 2vw 0 0 4vw;
+  font-family:  'Montserrat', sans-serif;
+  font-size: 2vw;
+  text-decoration: underline;
+}
+
+.game-desc {
+  top: 39vw;
+  left: 25vw;
+  font-family: 'Sulphur Point', sans-serif;
+  font-size: 2vw;
+  position: absolute;
+}
+
+#intro-text {
+  text-align: center;
+  font-size: 3vw;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0 2vw 2vw 2vw;
+}
+
+#intro-title {
+  text-align: center;
+  text-decoration: underline;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 6vw;
+  margin: 2vw 0 2vw 3vw;
+}
+
+.intro-div {
+  background-color: grey;
+  opacity: 0.8;
+  border: solid 0.1vw black;
+  border-radius: 1vw;
+  margin: 0 3vw 0 3vw;
+}
+
+#home {
+  margin-left: 12vw;
+}
+
+#projects {
+margin-left: 10vw;
+}
+
+#contactme {
+  margin-right: 10vw;
+}
+
+#about {
+margin-right: 12vw;
+}
+
+.text {
+  font-size: 2vw;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-left: 4vw;
+}
+
+.yt-link {
+  color: black;
+}
