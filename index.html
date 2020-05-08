@@ -1,27 +1,42 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Sulphur+Point&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/png" href="https://cdn.glitch.com/0891aaef-25f5-42b3-aa05-9dabe3fd6c79%2Flbark%20logo.png?v=1583763444340">
-    <title>lbark</title>
+    <title>Hello there</title>
+    <meta name="description" content="This is do be the description" />
+    <meta charset="utf-8" />
+    <meta name="robots" content="index,follow" />
+    <link rel="icon" href="#" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body id="home-page">
-    <div class="navbar">
-      <nav class="nav">
-        <ul class="menu">
-          <li id="home" class="nav-text-left"><a href="index.html"><b>Home</b></a></li>
-          <li id="projects" class="nav-text-left"><a href="projects.html">Projects</a></li>
-          <li id="about" class="nav-text-right"><a href="about.html">About</a></li>
-          <li id="contactme" class="nav-text-right"><a href="contactme.html">Contact Me</a></li>
+  <body>
+    <header class="main-head">
+      <nav>
+        <h1 id="logo">lBark</h1>
+        <ul>
+          <li class="selected"><a href="./index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
         </ul>
       </nav>
-    </div>
-    <div class="intro-div">
-      <h2 id="intro-title" >Welcome to my website</h2>
-      <p id="intro-text" >Hello I'm Luke and I am a coder who likes to make games and websites. So look around and click on my projcts to check them out.</p>
-    </div>
-    <footer id="footer"><p class="footer-text">Coded by Luke Barkess</p></footer>
+    </header>
+    <main class="hero">
+      <div class="intro-container">
+        <h2 class="intro">
+          I'm Luke and Im a coder who is interested in the development of
+          websites using a variety of different languages. <br />
+          I'm also a photographer and like to take pictures of the outside world
+        </h2>
+      </div>
+    </main>
+    <section class="best-app">
+      <h2>My Best App</h2>
+      <div class="best-app-container">
+        <img id="best-app" src="./img/comingSoonApp.png" alt="Coming Soon" />
+      </div>
+    </section>
   </body>
 </html>
