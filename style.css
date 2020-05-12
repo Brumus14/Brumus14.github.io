@@ -1,0 +1,317 @@
+/* Global Styling */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "poppins";
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Header Styling */
+.main-head {
+  background: rgba(211, 211, 211, 0.99);
+  color: white;
+  position: sticky;
+  width: 100%;
+  top: 0px;
+  z-index: 3;
+}
+
+.main-head nav {
+  min-height: 11vh;
+  padding: 2rem;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main-head ul {
+  display: flex;
+  flex-basis: 1rem;
+  flex: 1 1 40rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-head li {
+  display: inline-block;
+  position: relative;
+  color: #1b8180;
+}
+
+.main-head li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #1b8180;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.main-head li:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.selected::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(1);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #1b8180;
+  transform-origin: bottom left;
+}
+
+.main-head h1,
+.main-head a {
+  font-size: 3rem;
+  color: black;
+}
+
+#logo {
+  flex: 3 1 40rem;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  height: 89vh;
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.6)),
+    url("https://wallpaperaccess.com/full/1567665.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.intro-container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+}
+
+.intro {
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 3rem;
+}
+
+/* Best App Styling */
+.best-app {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 89vh;
+}
+
+.best-app h2 {
+  position: absolute;
+  top: 4rem;
+  text-decoration: underline;
+  font-size: 5rem;
+}
+
+.best-app-container {
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./img/halo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  box-shadow: rgba(0, 0, 0, 0.2) 0rem 0rem 2rem;
+  border-radius: 1rem;
+  height: 30rem;
+  width: 30rem;
+}
+
+.best-app-container:hover {
+  transform: scale(1.1);
+}
+
+#best-app {
+  margin: 8rem;
+  height: 10rem;
+  width: auto;
+}
+
+/* Portfolio Styling */
+.folders {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 89vh;
+}
+
+.folder {
+  transition: 0.3s;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  border: none;
+  outline: none;
+  background: white;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.2) 0rem 0rem 2rem;
+  height: 60rem;
+  width: 60rem;
+  border-radius: 1rem;
+}
+
+.folder:hover {
+  transform: scale(1.1);
+}
+
+.folder h2 {
+  font-size: 4rem;
+}
+
+.folder-img {
+  width: 30rem;
+  height: auto;
+}
+
+/* Apps Styling */
+.apps {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  height: 89vh;
+}
+
+.app {
+  transition: 0.3s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50rem;
+  height: 52rem;
+  border-radius: 2rem;
+  background: whitesmoke;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.2) 0rem 0rem 2rem;
+  margin: 2rem;
+  cursor: pointer;
+}
+
+.app:hover {
+  transform: scale(1.05);
+}
+
+.app:hover .text-box {
+  transition: 0.6s;
+  bottom: 2rem;
+}
+
+.app-name {
+  font-size: 3rem;
+  margin: 3rem 0rem;
+}
+
+.app-logo-container {
+  position: relative;
+  background: whitesmoke;
+  height: 25rem;
+  width: 50rem;
+  z-index: 2;
+  margin-bottom: 10rem;
+}
+
+.app-logo {
+  height: 25rem;
+  width: auto;
+}
+
+.app-version {
+  transition: 0.4s;
+  background: whitesmoke;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 5rem;
+  outline: none;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+
+.app-version:hover {
+  background: lightgrey;
+}
+
+.text-box {
+  transition: 0.5s;
+  position: absolute;
+  bottom: 25rem;
+}
+
+.app-desc {
+  font-size: 3rem;
+}
+
+.page-coming-soon {
+  font-size: 20rem;
+  transform: rotateZ(20deg);
+}
+
+/* Patch Notes Styling */
+.patch-notes {
+  text-align: center;
+}
+
+.patch-notes-title {
+  font-size: 4rem;
+  text-decoration: underline;
+}
+
+.patch-notes-version {
+  margin: 3rem;
+  font-size: 3rem;
+  text-decoration: underline;
+}
+
+.patch-notes-desc {
+  margin: 0 30rem;
+  font-size: 2rem;
+}
+
+.back-to-apps-patch-notes {
+  margin: 2rem;
+  font-size: 2rem;
+}
