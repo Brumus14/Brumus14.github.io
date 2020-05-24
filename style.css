@@ -120,7 +120,7 @@ a {
 
 .intro {
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 3rem;
   padding: 3rem;
 }
 
@@ -267,8 +267,9 @@ a {
   bottom: 0.5rem;
   right: 5rem;
   outline: none;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border: 1px solid black;
+  font-size: 1.5rem;
 }
 
 .app-version:hover {
