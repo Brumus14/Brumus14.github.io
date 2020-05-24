@@ -297,6 +297,7 @@ a {
 }
 
 .patch-notes-title {
+  margin-top: 3rem;
   font-size: 4rem;
   text-decoration: underline;
 }
@@ -312,7 +313,12 @@ a {
   font-size: 2rem;
 }
 
-.back-to-apps-patch-notes {
-  margin: 2rem;
-  font-size: 2rem;
+.back-arrow-patch-notes {
+  position: absolute;
+  margin: 3rem;
+}
+
+.back-arrow-img {
+  transform: rotateZ(180deg);
+  width: 5rem;
 }
