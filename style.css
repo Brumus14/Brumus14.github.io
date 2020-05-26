@@ -342,7 +342,7 @@ a {
 }
 
 .photo-btn {
-  transition: 0.2s;
+  transition: transform 0.3s;
   background: transparent;
   outline: none;
   border: none;
@@ -358,15 +358,33 @@ a {
 }
 
 .photo-btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+}
+
+.photo-exit-btn {
+  position: absolute;
+  display: none;
+  background: none;
+  outline: none;
+  border: none;
+  margin: 3rem;
+  top: 11vh;
+  right: 0vw;
+}
+
+.photo-exit-btn-img {
+  width: 4rem;
+  height: auto;
 }
 
 #enlarged {
+  transform: scale(1);
   height: 85vh;
   width: auto;
   margin: auto;
   position: absolute;
-  z-index: 100;
+  z-index: 1;
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.6);
 }
 
 #enlarged:hover {
