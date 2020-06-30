@@ -390,3 +390,40 @@ a {
 #enlarged:hover {
   transform: scale(1);
 }
+
+.loading-page {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  top: 0px;
+  background: rgb(100, 100, 100);
+  z-index: 100;
+}
+
+.loading {
+  font-family: "Poppins";
+  font-size: 5rem;
+  margin-bottom: 8vw;
+}
+
+.loading-img {
+  width: 10rem;
+  height: auto;
+  animation: loading 1.5s infinite linear;
+}
+
+/* Animations */
+
+@keyframes loading {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(360deg);
+  }
+}
