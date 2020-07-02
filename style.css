@@ -17,6 +17,8 @@ html {
 
 body {
   font-family: "poppins";
+  height: 100vh;
+  width: 100vw;
 }
 
 a {
@@ -26,6 +28,7 @@ a {
 
 /* Header Styling */
 .main-head {
+  transition: 0.6s ease;
   background: rgba(211, 211, 211, 0.99);
   color: white;
   position: sticky;
@@ -35,7 +38,7 @@ a {
 }
 
 .main-head nav {
-  min-height: 11vh;
+  height: 11vh;
   padding: 2rem;
   display: flex;
   width: 90%;
@@ -98,12 +101,17 @@ a {
   flex: 3 1 40rem;
 }
 
+#logo-text {
+  font-size: 3.5rem;
+  display: inline-block;
+}
+
 /* Hero */
 .hero {
   display: flex;
   height: 89vh;
   background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.6)),
-    url("https://wallpaperaccess.com/full/1567665.png");
+    url("./img/heroBackground.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -120,7 +128,7 @@ a {
 
 .intro {
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 2.5rem;
   padding: 3rem;
 }
 
@@ -214,6 +222,7 @@ a {
   justify-content: space-evenly;
   flex-wrap: wrap;
   height: 89vh;
+  width: 100vw;
 }
 
 .app {
@@ -261,11 +270,19 @@ a {
 }
 
 .app-version {
+  transition: 0.4s;
+  background: whitesmoke;
   position: absolute;
   bottom: 0.5rem;
   right: 5rem;
   outline: none;
-  border: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid black;
+  font-size: 1.5rem;
+}
+
+.app-version:hover {
+  background: lightgrey;
 }
 
 .text-box {
@@ -278,17 +295,13 @@ a {
   font-size: 3rem;
 }
 
-.page-coming-soon {
-  font-size: 20rem;
-  transform: rotateZ(20deg);
-}
-
 /* Patch Notes Styling */
 .patch-notes {
   text-align: center;
 }
 
 .patch-notes-title {
+  margin-top: 3rem;
   font-size: 4rem;
   text-decoration: underline;
 }
@@ -304,7 +317,117 @@ a {
   font-size: 2rem;
 }
 
-.back-to-apps-patch-notes {
-  margin: 2rem;
-  font-size: 2rem;
+.back-arrow-patch-notes {
+  position: absolute;
+  margin: 3rem;
+}
+
+.back-arrow-img {
+  transform: rotateZ(180deg);
+  width: 5rem;
+}
+
+/* Photos Styling */
+
+.photos {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 89vh;
+  width: 99vw;
+  margin: auto;
+}
+
+.photo {
+  height: 100%;
+  transform: scale(1.5);
+}
+
+.photo-btn {
+  transition: transform 0.3s;
+  background: transparent;
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 28rem;
+  height: 28rem;
+  overflow: hidden;
+  border-radius: 2rem;
+  margin: 1rem;
+}
+
+.photo-btn:hover {
+  transform: scale(1.05);
+}
+
+.photo-exit-btn {
+  position: absolute;
+  display: none;
+  background: none;
+  outline: none;
+  border: none;
+  margin: 3rem;
+  top: 11vh;
+  right: 0vw;
+}
+
+.photo-exit-btn-img {
+  width: 4rem;
+  height: auto;
+}
+
+#enlarged {
+  transform: scale(1);
+  height: 85vh;
+  width: auto;
+  margin: auto;
+  position: absolute;
+  z-index: 1;
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.6);
+}
+
+#enlarged:hover {
+  transform: scale(1);
+}
+
+.loading-page {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  top: 0px;
+  background: rgb(100, 100, 100);
+  z-index: 100;
+}
+
+.loading {
+  font-family: "Poppins";
+  font-size: 5rem;
+  margin-bottom: 8vw;
+}
+
+.loading-img {
+  width: 10rem;
+  height: auto;
+  animation: loading 1.5s infinite linear;
+}
+
+/* Animations */
+
+@keyframes loading {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(360deg);
+  }
 }
