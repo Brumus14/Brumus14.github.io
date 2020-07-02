@@ -17,6 +17,8 @@ html {
 
 body {
   font-family: "poppins";
+  height: 100vh;
+  width: 100vw;
 }
 
 a {
@@ -101,6 +103,7 @@ a {
 
 #logo-text {
   font-size: 3.5rem;
+  display: inline-block;
 }
 
 /* Hero */
@@ -219,6 +222,7 @@ a {
   justify-content: space-evenly;
   flex-wrap: wrap;
   height: 89vh;
+  width: 100vw;
 }
 
 .app {
