@@ -26,6 +26,25 @@ a {
   color: black;
 }
 
+/* Page Not Found Styling */
+.page-not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 89vh;
+  width: 100vw;
+}
+
+.page-not-found-num {
+  font-size: 20rem;
+  padding-bottom: 12rem;
+}
+
+.page-not-found-title {
+  font-size: 10rem;
+}
+
 /* Header Styling */
 .main-head {
   transition: 0.6s ease;
