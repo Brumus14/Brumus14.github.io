@@ -26,25 +26,6 @@ a {
   color: black;
 }
 
-/* Page Not Found Styling */
-.page-not-found {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 89vh;
-  width: 100vw;
-}
-
-.page-not-found-num {
-  font-size: 20rem;
-  padding-bottom: 12rem;
-}
-
-.page-not-found-title {
-  font-size: 10rem;
-}
-
 /* Header Styling */
 .main-head {
   transition: 0.6s ease;
@@ -67,6 +48,7 @@ a {
 }
 
 .main-head ul {
+  position: relative;
   display: flex;
   flex-basis: 1rem;
   flex: 1 1 40rem;
@@ -151,49 +133,6 @@ a {
   padding: 3rem;
 }
 
-/* Best App Styling */
-.best-app {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 89vh;
-}
-
-.best-app h2 {
-  position: absolute;
-  top: 4rem;
-  text-decoration: underline;
-  font-size: 5rem;
-}
-
-.best-app-container {
-  transition: 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url("./img/halo.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  box-shadow: rgba(0, 0, 0, 0.2) 0rem 0rem 2rem;
-  border-radius: 1rem;
-  height: 30rem;
-  width: 30rem;
-}
-
-.best-app-container:hover {
-  transform: scale(1.1);
-}
-
-#best-app {
-  margin: 8rem;
-  height: 10rem;
-  width: auto;
-}
-
 /* Portfolio Styling */
 .folders {
   display: flex;
@@ -238,10 +177,18 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
+  margin: auto;
   height: 89vh;
   width: 100vw;
+}
+
+.apps-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  box-sizing: border-box;
 }
 
 .app {
@@ -250,8 +197,8 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50rem;
-  height: 52rem;
+  width: 38rem;
+  height: 40rem;
   border-radius: 2rem;
   background: whitesmoke;
   text-align: center;
@@ -277,14 +224,14 @@ a {
 .app-logo-container {
   position: relative;
   background: whitesmoke;
-  height: 25rem;
-  width: 50rem;
+  height: 18rem;
+  width: 38rem;
   z-index: 2;
   margin-bottom: 10rem;
 }
 
 .app-logo {
-  height: 25rem;
+  height: 16rem;
   width: auto;
 }
 
@@ -295,7 +242,8 @@ a {
   bottom: 0.5rem;
   right: 5rem;
   outline: none;
-  padding: 0.5rem 1rem;
+  width: 5rem;
+  height: 4rem;
   border: 1px solid black;
   font-size: 1.5rem;
 }
@@ -307,19 +255,25 @@ a {
 .text-box {
   transition: 0.5s;
   position: absolute;
-  bottom: 25rem;
+  bottom: 14rem;
+  padding: 0 1rem;
 }
 
 .app-desc {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 /* Patch Notes Styling */
 .patch-notes {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
 .patch-notes-title {
+  text-align: center;
   margin-top: 3rem;
   font-size: 4rem;
   text-decoration: underline;
