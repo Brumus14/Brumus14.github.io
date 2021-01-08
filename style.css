@@ -39,7 +39,6 @@ a {
 
 .main-head nav {
   height: 11vh;
-  padding: 2rem;
   display: flex;
   width: 90%;
   margin: auto;
@@ -111,8 +110,7 @@ a {
 .hero {
   display: flex;
   height: 89vh;
-  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.6)),
-    url("./img/heroBackground.png");
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.6)), url("./img/heroBackground.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -144,7 +142,7 @@ a {
 }
 
 .folder {
-  transition: 0.3s;
+  transition: transform 0.3s ease;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -154,8 +152,8 @@ a {
   background: white;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.2) 0rem 0rem 2rem;
-  height: 60rem;
-  width: 60rem;
+  height: 30vw;
+  width: 30vw;
   border-radius: 1rem;
 }
 
@@ -180,7 +178,7 @@ a {
   justify-content: center;
   flex-wrap: wrap;
   margin: auto;
-  height: 89vh;
+  height: 73vh;
   width: 100vw;
 }
 
