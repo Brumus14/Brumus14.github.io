@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  font-family: "poppins";
+  font-family: "Poppins";
   height: 100vh;
   width: 100vw;
 }
@@ -31,13 +31,11 @@ a {
   transition: 0.6s ease;
   background: rgba(211, 211, 211, 0.99);
   color: white;
-  position: sticky;
   width: 100%;
-  top: 0px;
   z-index: 3;
 }
 
-.main-head nav {
+.nav-bar {
   height: 11vh;
   display: flex;
   width: 90%;
@@ -46,22 +44,22 @@ a {
   flex-wrap: wrap;
 }
 
-.main-head ul {
-  position: relative;
+.nav-items {
   display: flex;
   flex-basis: 1rem;
   flex: 1 1 40rem;
   justify-content: space-around;
   align-items: center;
+  transition: top 0.6s ease;
 }
 
-.main-head li {
+.nav-link {
   display: inline-block;
   position: relative;
   color: #1b8180;
 }
 
-.main-head li::after {
+.nav-link::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -74,9 +72,35 @@ a {
   transition: transform 0.25s ease-out;
 }
 
-.main-head li:hover::after {
+.nav-link:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.burger-nav-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 2rem;
+  width: 4rem;
+  height: auto;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-burger {
+  display: none;
+}
+
+.burger-line {
+  background: black;
+  clear: left;
+  float: left;
+  height: 0.4rem;
+  margin: 0.4rem;
+  transition: all 0.2s;
+  width: 4rem;
+  border-radius: 1rem;
 }
 
 .selected::before {
@@ -121,14 +145,24 @@ a {
 }
 
 .intro-container {
-  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 14rem 14rem rgba(0, 0, 0, 0.4);
   border-radius: 1rem;
+  width: 50%;
+  height: 20%;
 }
 
-.intro {
+.intro-name {
   font-weight: bold;
-  font-size: 2.5rem;
-  padding: 3rem;
+  font-size: 6rem;
+}
+
+.intro-description {
+  font-size: 3rem;
 }
 
 /* Portfolio Styling */
@@ -142,7 +176,7 @@ a {
 }
 
 .folder {
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -151,18 +185,21 @@ a {
   outline: none;
   background: white;
   text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.2) 0rem 0rem 2rem;
   height: 30vw;
   width: 30vw;
   border-radius: 1rem;
+  background: whitesmoke;
+  cursor: pointer;
 }
 
 .folder:hover {
-  transform: scale(1.1);
+  transform: scale(1.04);
+  box-shadow: 0rem 0rem 1.6rem 1rem rgba(0, 0, 0, 0.1);
 }
 
-.folder h2 {
-  font-size: 4rem;
+.folder-title {
+  font-family: "Poppins";
+  font-size: 6rem;
 }
 
 .folder-img {
@@ -177,41 +214,48 @@ a {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin: auto;
-  height: 73vh;
+  margin-top: 6rem;
   width: 100vw;
 }
 
 .apps-container {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  width: 90%;
+  height: 90%;
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   box-sizing: border-box;
 }
 
 .app {
-  transition: 0.3s;
+  transition: 0.4s ease;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 38rem;
-  height: 40rem;
   border-radius: 2rem;
   background: whitesmoke;
   text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.2) 0rem 0rem 2rem;
-  margin: 2rem;
   cursor: pointer;
 }
 
 .app:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
+  box-shadow: 0rem 0rem 1.6rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.app-link {
+  width: 100%;
+  height: 100%;
 }
 
 .app:hover .text-box {
   transition: 0.6s;
-  bottom: 2rem;
+  transform: translateY(-120%);
+}
+
+.app:hover .app-desc {
+  opacity: 1;
 }
 
 .app-name {
@@ -221,29 +265,34 @@ a {
 
 .app-logo-container {
   position: relative;
-  background: whitesmoke;
+  background-image: linear-gradient(to bottom, whitesmoke, 96%, transparent);
   height: 18rem;
-  width: 38rem;
+  width: 100%;
   z-index: 2;
   margin-bottom: 10rem;
 }
 
 .app-logo {
-  height: 16rem;
+  height: 14rem;
   width: auto;
 }
 
 .app-version {
-  transition: 0.4s;
+  transition: background 0.4s ease;
   background: whitesmoke;
   position: absolute;
   bottom: 0.5rem;
   right: 5rem;
   outline: none;
-  width: 5rem;
-  height: 4rem;
-  border: 1px solid black;
-  font-size: 1.5rem;
+  width: 4rem;
+  height: 3rem;
+  border: 2px solid black;
+  border-radius: 4rem;
+  font-size: 1.4rem;
+  padding: 0.1rem 0.4rem;
+  font-family: "Poppins", sans-serif;
+  will-change: transform;
+  box-sizing: initial;
 }
 
 .app-version:hover {
@@ -253,12 +302,15 @@ a {
 .text-box {
   transition: 0.5s;
   position: absolute;
-  bottom: 14rem;
-  padding: 0 1rem;
+  transform: translateY(-200%);
+  padding: 0 3rem;
+  width: 100%;
 }
 
 .app-desc {
-  font-size: 2rem;
+  opacity: 0;
+  font-size: 1.8rem;
+  transition: opacity 0.4s ease;
 }
 
 /* Patch Notes Styling */
@@ -302,22 +354,27 @@ a {
 
 .photos {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  height: 89vh;
-  width: 99vw;
-  margin: auto;
+  justify-content: center;
+  width: 100vw;
+}
+
+.photos-container {
+  margin-top: 8rem;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 4rem;
+  width: 90%;
 }
 
 .photo {
-  height: 100%;
+  width: 100%;
   transform: scale(1.5);
+  cursor: pointer;
+  image-rendering: optimizeQuality;
 }
 
 .photo-btn {
-  transition: transform 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   background: transparent;
   outline: none;
   border: none;
@@ -325,15 +382,14 @@ a {
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 28rem;
-  height: 28rem;
+  height: 24rem;
   overflow: hidden;
   border-radius: 2rem;
-  margin: 1rem;
 }
 
 .photo-btn:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
+  box-shadow: 0rem 0rem 1.6rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 .photo-exit-btn {
@@ -354,7 +410,7 @@ a {
 
 #enlarged {
   transform: scale(1);
-  height: 85vh;
+  height: 80vh;
   width: auto;
   margin: auto;
   position: absolute;
@@ -364,6 +420,11 @@ a {
 
 #enlarged:hover {
   transform: scale(1);
+}
+
+#enlarged .photo {
+  height: 100%;
+  width: initial;
 }
 
 .loading-page {
@@ -400,5 +461,75 @@ a {
 
   to {
     transform: rotateZ(360deg);
+  }
+}
+
+/* Media */
+@media only screen and (min-device-width: 1660px) {
+  .nav-items {
+    display: flex;
+  }
+}
+
+@media only screen and (max-device-width: 1660px) {
+  .apps-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .nav-items {
+    display: flex;
+  }
+}
+
+@media only screen and (max-device-width: 1330px) {
+  .apps-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .app:hover .text-box {
+    transform: translateY(-120%);
+  }
+
+  .nav-burger {
+    display: block;
+  }
+
+  .burger-nav-close {
+    display: block;
+  }
+
+  .nav-items {
+    position: absolute;
+    top: -100%;
+  }
+
+  #logo {
+    flex: 1;
+  }
+}
+
+@media only screen and (max-device-width: 860px) {
+  .apps-container {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .app:hover .text-box {
+    transform: translateY(-160%);
+  }
+}
+
+@media only screen and (max-device-width: 520px) {
+  .app:hover .text-box {
+    transform: translateY(-120%);
+  }
+}
+
+@media only screen and (max-device-width: 360px) {
+  .app:hover .text-box {
+    transform: translateY(-140%);
+  }
+
+  .app-desc {
+    font-size: 1.2rem;
   }
 }

@@ -8,64 +8,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../style.css" />
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+    <script src="../script.js" defer></script>
   </head>
   <body>
     <header class="main-head">
-      <nav>
+      <nav class="nav-bar">
         <div id="logo">
           <a href="../"><h1 id="logo-text">lBark</h1></a>
         </div>
-        <ul>
-          <li><a href="../">Home</a></li>
-          <li class="selected"><a href="../portfolio/">Portfolio</a></li>
+        <ul class="nav-items">
+          <img class="burger-nav-close" src="../icons/Cross.png" alt="" />
+          <li class="nav-link"><a href="../">Home</a></li>
+          <li class="nav-link selected"><a href="../portfolio/">Portfolio</a></li>
         </ul>
+        <div class="nav-burger">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </div>
       </nav>
     </header>
     <main class="apps">
       <div class="apps-container">
-        <a href="https://clocker.glitch.me" target="_blank">
-          <div class="app">
+        <div class="app">
+          <a class="app-link" href="https://clocker.glitch.me" target="_blank">
             <h2 class="app-name">Clocker</h2>
             <div class="app-logo-container">
               <img class="app-logo" src="../img/appLogos/clockerLogo.png" alt="" />
               <button class="app-version" onclick="window.location.href='./patch-notes/clocker.html'">v1.0</button>
             </div>
             <div class="text-box">
-              <p class="app-desc">
-                A very nice looking simplistic clock to easily tell the time with digital and analogue clocks.
-              </p>
+              <p class="app-desc">A very nice looking simplistic clock to easily tell the time with digital and analogue clocks.</p>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
 
-        <a href="https://rollr.glitch.me" target="_blank">
-          <div class="app">
+        <div class="app">
+          <a class="app-link" href="https://rollr.glitch.me" target="_blank">
             <h2 class="app-name">Rollr</h2>
             <div class="app-logo-container">
               <img class="app-logo" src="../img/appLogos/rollrLogo.png" alt="" />
-              <button class="app-version" onclick="window.location.href='./patch-notes/rollr.html'">v1.1</button>
+              <button class="app-version" onclick="window.location.href='./patch-notes/rollr.html'">v1.2</button>
             </div>
             <div class="text-box">
-              <p class="app-desc">A proffessional dice roller which has a customisable number range.</p>
+              <p class="app-desc">Rollr is a dice roller which can be adapted to be a polygon dice with any amount of sides.</p>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
 
-        <a href="https://ticka.glitch.me" target="_blank">
-          <div class="app">
-            <h2 class="app-name">Ticka</h2>
+        <div class="app">
+          <a class="app-link" href="https://stimer.glitch.me" target="_blank">
+            <h2 class="app-name">STimer</h2>
             <div class="app-logo-container">
               <img class="app-logo" src="../img/appLogos/tickaLogo.png" alt="" />
-              <button class="app-version" onclick="window.location.href='./patch-notes/ticka.html'">v1.0</button>
+              <button class="app-version" onclick="window.location.href='./patch-notes/ticka.html'">v1.1</button>
             </div>
             <div class="text-box">
-              <p class="app-desc">A simplistic timer for many uses with easy to use UI.</p>
+              <p class="app-desc">STimer is a very simple and versitile timer with nice UI to time your daily activities.</p>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
 
-        <a href="https://genn.glitch.me" target="_blank">
-          <div class="app">
+        <div class="app">
+          <a class="app-link" href="https://genn.glitch.me" target="_blank">
             <h2 class="app-name">PassGen</h2>
             <div class="app-logo-container">
               <img class="app-logo" src="../img/appLogos/gennLogo.png" alt="" />
@@ -74,36 +79,47 @@
             <div class="text-box">
               <p class="app-desc">A simple to use and customisable password generator fit to you standards.</p>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
 
-        <a href="https://wig.glitch.me" target="_blank">
-          <div class="app">
+        <div class="app">
+          <a class="app-link" href="https://wig.glitch.me" target="_blank">
             <h2 class="app-name">Wig</h2>
             <div class="app-logo-container">
-              <img class="app-logo" src="../img/appLogos/" alt="" />
+              <img class="app-logo" src="../img/appLogos/WigLogo.png" alt="" />
               <button class="app-version" onclick="window.location.href='./patch-notes/wig.html'">v1.0</button>
             </div>
             <div class="text-box">
-              <p class="app-desc">
-                Wig makes coming up with website ideas from a irritating to a quick and simple click of a button.
-              </p>
+              <p class="app-desc">Wig makes coming up with website ideas from a irritating to a quick and simple click of a button.</p>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
 
-        <a href="https://rring.glitch.me" target="_blank">
-          <div class="app">
+        <div class="app">
+          <a class="app-link" href="https://rring.glitch.me" target="_blank">
             <h2 class="app-name">Rring</h2>
             <div class="app-logo-container">
-              <img class="app-logo" src="../img/appLogos/" alt="" />
-              <button class="app-version" onclick="window.location.href='./patch-notes/rring.html'">v1.0</button>
+              <img class="app-logo" src="../img/appLogos/RringLogo.png" alt="" />
+              <button class="app-version" onclick="window.location.href='./patch-notes/rring.html'">v1.1</button>
             </div>
             <div class="text-box">
-              <p class="app-desc">Rring is a simple alarm clock to help remind you of your daily activities.</p>
+              <p class="app-desc">Rring is a simple alarm clock to help remind you of your daily activities or tasks.</p>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
+
+        <div class="app">
+          <a class="app-link" href="https://vctimer.glitch.me" target="_blank">
+            <h2 class="app-name">VCtimer</h2>
+            <div class="app-logo-container">
+              <img class="app-logo" src="../img/appLogos/" alt="" />
+              <button class="app-version" onclick="window.location.href='./patch-notes/vctimer.html'">v1.0</button>
+            </div>
+            <div class="text-box">
+              <p class="app-desc">VCtimer is a cube timer with very simple UI yet stats to help your cubing.</p>
+            </div>
+          </a>
+        </div>
       </div>
     </main>
   </body>
