@@ -214,7 +214,7 @@ a {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 6rem;
+  padding: 6rem 0;
   width: 100vw;
 }
 
@@ -479,15 +479,28 @@ a {
   .nav-items {
     display: flex;
   }
+
+  .folder-title {
+    font-size: 4rem;
+  }
+
+  .folder-img {
+    width: 16em;
+    height: auto;
+  }
 }
 
-@media only screen and (max-device-width: 1330px) {
+@media only screen and (max-device-width: 1260px) {
   .apps-container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .app:hover .text-box {
+  .text-box {
     transform: translateY(-120%);
+  }
+
+  .app-desc {
+    opacity: 1;
   }
 
   .nav-burger {
@@ -506,6 +519,20 @@ a {
   #logo {
     flex: 1;
   }
+
+  .folder {
+    width: 40rem;
+    height: 40rem;
+  }
+
+  .folder-title {
+    font-size: 4rem;
+  }
+
+  .folder-img {
+    width: 16em;
+    height: auto;
+  }
 }
 
 @media only screen and (max-device-width: 860px) {
@@ -513,23 +540,97 @@ a {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .app:hover .text-box {
-    transform: translateY(-160%);
+  .text-box {
+    transform: translateY(-140%);
+    opacity: 1;
+  }
+
+  .app-desc {
+    font-size: 2rem;
+    opacity: 1;
+  }
+
+  .folders {
+    flex-direction: column;
+  }
+
+  .folder {
+    width: 30rem;
+    height: 30rem;
+  }
+
+  .folder-title {
+    font-size: 3rem;
+  }
+
+  .folder-img {
+    width: 12em;
+    height: auto;
+  }
+
+  .intro-name {
+    font-size: 4rem;
+  }
+
+  .intro-description {
+    font-size: 3rem;
   }
 }
 
 @media only screen and (max-device-width: 520px) {
-  .app:hover .text-box {
+  .text-box {
     transform: translateY(-120%);
+    opacity: 1;
+  }
+
+  .app-desc {
+    font-size: 1.4rem;
+    opacity: 1;
+  }
+
+  .intro-name {
+    font-size: 3rem;
+  }
+
+  .intro-description {
+    font-size: 2.4rem;
   }
 }
 
-@media only screen and (max-device-width: 360px) {
-  .app:hover .text-box {
+@media only screen and (max-device-width: 380px) {
+  .text-box {
     transform: translateY(-140%);
+    opacity: 1;
   }
 
   .app-desc {
     font-size: 1.2rem;
+    opacity: 1;
+  }
+
+  .folder {
+    width: 24rem;
+    height: 24rem;
+  }
+
+  .folder-title {
+    font-size: 3rem;
+  }
+
+  .folder-img {
+    width: 12rem;
+    height: auto;
+  }
+
+  .intro-container {
+    height: 10%;
+  }
+
+  .intro-name {
+    font-size: 2.2rem;
+  }
+
+  .intro-description {
+    font-size: 1.8rem;
   }
 }
