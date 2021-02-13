@@ -42,7 +42,10 @@ function rendered() {
     photosLoaded = true;
     setTimeout(() => {
       loadingPage.style.display = "none";
+      document.querySelector("body").style.overflow = "visible";
     }, 800);
+  } else {
+    document.querySelector("body").style.overflow = "hidden";
   }
 }
 
