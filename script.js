@@ -14,16 +14,12 @@ let bodyElement = document.querySelector("body");
 // Eventlisteners
 navBurgerElement.addEventListener("click", openBurgerNavigation);
 burgerNavCloseElement.addEventListener("click", closeBurgerNavigation);
+window.addEventListener("DOMContentLoaded", () => {
+  setTimeout(resizePhoto, 600);
+  imageEnlargeToggler();
+});
 
 //Functions
-function wait(ms) {
-  var start = new Date().getTime();
-  var end = start;
-  while (end < start + ms) {
-    end = new Date().getTime();
-  }
-}
-
 function imgEnlarge(element) {
   var clonedImg = element.cloneNode(true);
   document.querySelector(".photos").appendChild(clonedImg);
@@ -35,6 +31,8 @@ function imgEnlarge(element) {
       clonedImg.remove();
     }
   });
+
+  clonedImg.children[0].removeAttribute("style");
 }
 
 function rendered() {
@@ -42,8 +40,9 @@ function rendered() {
 
   if (photosRendered == photosNum) {
     photosLoaded = true;
-    wait(800);
-    loadingPage.style.display = "none";
+    setTimeout(() => {
+      loadingPage.style.display = "none";
+    }, 800);
   }
 }
 
@@ -53,6 +52,25 @@ function startRender() {
 
 function loaded() {
   requestAnimationFrame(startRender);
+}
+
+function resizePhoto() {
+  photoElements = document.querySelectorAll(".photo");
+  photoElements.forEach((photo) => {
+    let photoWidth = 0;
+    photoWidth = photo.clientWidth;
+    let photoHeight = 0;
+    photoHeight = photo.clientHeight;
+    if (photoWidth > photoHeight) {
+      photo.style.height = "100%";
+    } else if (photoWidth < photoHeight) {
+      photo.style.width = "100%";
+    }
+
+    if (Math.floor(photoWidth / 100) * 100 == Math.floor(photoHeight / 100) * 100) {
+      photo.style.transform = "scale(1.2)";
+    }
+  });
 }
 
 function openBurgerNavigation() {
@@ -69,4 +87,13 @@ function closeBurgerNavigation() {
     burgerNavCloseElement.style.display = "none";
     navItemsElement.removeAttribute("style");
   }, 600);
+}
+
+function imageEnlargeToggler() {
+  if (screen.width <= 1260) {
+    photoButtonElements = document.querySelectorAll(".photo-btn");
+    photoButtonElements.forEach((photoButton) => {
+      photoButton.removeAttribute("onclick");
+    });
+  }
 }

@@ -214,7 +214,7 @@ a {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 6rem 0;
+  padding-top: 4rem;
   width: 100vw;
 }
 
@@ -359,7 +359,7 @@ a {
 }
 
 .photos-container {
-  margin-top: 8rem;
+  padding-top: 4rem;
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 4rem;
@@ -367,10 +367,8 @@ a {
 }
 
 .photo {
-  width: 100%;
-  transform: scale(1.5);
+  transform: scale(1);
   cursor: pointer;
-  image-rendering: optimizeQuality;
 }
 
 .photo-btn {
@@ -409,7 +407,7 @@ a {
 }
 
 #enlarged {
-  transform: scale(1);
+  transform: scale(1) translateY(4rem);
   height: 80vh;
   width: auto;
   margin: auto;
@@ -419,7 +417,7 @@ a {
 }
 
 #enlarged:hover {
-  transform: scale(1);
+  transform: scale(1) translateY(4rem);
 }
 
 #enlarged .photo {
@@ -488,6 +486,15 @@ a {
     width: 16em;
     height: auto;
   }
+
+  .apps {
+    padding: 6rem 0;
+  }
+
+  .photos-container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding: 4rem;
+  }
 }
 
 @media only screen and (max-device-width: 1260px) {
@@ -533,6 +540,15 @@ a {
     width: 16em;
     height: auto;
   }
+
+  .app-logo-container {
+    background-image: none;
+    background: whitesmoke;
+  }
+
+  .photos-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media only screen and (max-device-width: 860px) {
@@ -575,6 +591,10 @@ a {
   .intro-description {
     font-size: 3rem;
   }
+
+  .photos-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media only screen and (max-device-width: 520px) {
@@ -594,6 +614,10 @@ a {
 
   .intro-description {
     font-size: 2.4rem;
+  }
+
+  .photos-container {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
 
