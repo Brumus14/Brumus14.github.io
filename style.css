@@ -324,9 +324,16 @@ a {
 
 .patch-notes-title {
   text-align: center;
-  margin-top: 3rem;
+  margin: 3rem 0;
   font-size: 4rem;
   text-decoration: underline;
+}
+
+.patch-note {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
 }
 
 .patch-notes-version {
@@ -336,7 +343,7 @@ a {
 }
 
 .patch-notes-desc {
-  margin: 0 30rem;
+  width: 60%;
   font-size: 2rem;
 }
 
@@ -346,12 +353,15 @@ a {
 }
 
 .back-arrow-img {
-  transform: rotateZ(180deg);
   width: 5rem;
+  transition: transform 0.2s ease;
+}
+
+.back-arrow-img:hover {
+  transform: scale(1.1);
 }
 
 /* Photos Styling */
-
 .photos {
   display: flex;
   justify-content: center;
@@ -508,6 +518,7 @@ a {
 
   .app-desc {
     opacity: 1;
+    font-size: 1.6rem;
   }
 
   .nav-burger {
@@ -562,7 +573,6 @@ a {
   }
 
   .app-desc {
-    font-size: 2rem;
     opacity: 1;
   }
 
